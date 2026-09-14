@@ -95,14 +95,16 @@ export default function Navbar() {
         <Container as="nav" aria-label="Main navigation">
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Brand */}
-            <a
+            <motion.a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="text-[#CFD2B2] font-mono text-sm font-semibold tracking-widest hover:text-[#E0D8DE] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CFD2B2] rounded-sm"
               aria-label="geraldy.dev — Back to top"
             >
               geraldy.dev
-            </a>
+            </motion.a>
 
             {/* Desktop nav links */}
             <div className="hidden md:flex items-center gap-2" role="list">
@@ -111,10 +113,12 @@ export default function Navbar() {
                   const sectionId = link.href.replace('#', '');
                   const isActive = activeSection === sectionId;
                   return (
-                    <a
+                    <motion.a
                       key={link.href}
                       href={link.href}
                       onClick={(e) => handleNavClick(e, link.href)}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
                       role="listitem"
                       className={cn(
                         'relative px-3 py-1.5 text-xs tracking-widest font-medium uppercase transition-colors duration-200 rounded-sm',
@@ -133,7 +137,7 @@ export default function Navbar() {
                         />
                       )}
                       <span className="relative z-10">{link.label}</span>
-                    </a>
+                    </motion.a>
                   );
                 })}
               </LayoutGroup>
@@ -141,32 +145,38 @@ export default function Navbar() {
 
             {/* Desktop social + CTA */}
             <div className="hidden md:flex items-center gap-4">
-              <a
+              <motion.a
                 href={SITE.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.95 }}
                 className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
               >
                 <GithubIcon size={17} aria-hidden />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={SITE.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.95 }}
                 className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
               >
                 <LinkedinIcon size={17} aria-hidden />
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={`https://mail.google.com/mail/?view=cm&fs=1&to=${SITE.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="ml-2 px-4 py-1.5 text-xs font-semibold tracking-widest uppercase border border-[#CFD2B2]/60 text-[#CFD2B2] rounded hover:bg-[#CFD2B2]/10 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CFD2B2]"
               >
                 Let&apos;s Talk
-              </a>
+              </motion.a>
             </div>
 
             {/* Mobile menu toggle */}
@@ -237,32 +247,38 @@ export default function Navbar() {
 
           {/* Mobile social links */}
           <div className="mt-auto flex items-center gap-6">
-            <a
+            <motion.a
               href={SITE.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
               className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors"
             >
               <GithubIcon size={20} aria-hidden />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={SITE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
               className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors"
             >
               <LinkedinIcon size={20} aria-hidden />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={`https://mail.google.com/mail/?view=cm&fs=1&to=${SITE.email}`}
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="ml-auto px-5 py-2 text-xs font-semibold tracking-widest uppercase border border-[#CFD2B2]/60 text-[#CFD2B2] rounded hover:bg-[#CFD2B2]/10 transition-all"
             >
               Let&apos;s Talk
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

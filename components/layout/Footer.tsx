@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
 import { SITE } from '@/lib/constants';
@@ -37,12 +40,14 @@ export default function Footer() {
                 { label: 'Contact',    href: '#contact' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
+                  <motion.a
                     href={link.href}
-                    className="text-xs text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200 tracking-wider uppercase"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="inline-block text-xs text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200 tracking-wider uppercase"
                   >
                     {link.label}
-                  </a>
+                  </motion.a>
                 </li>
               ))}
             </ul>
@@ -50,31 +55,39 @@ export default function Footer() {
 
           {/* Social links */}
           <div className="flex items-center gap-4">
-            <a
+            <motion.a
               href={SITE.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
             >
               <GithubIcon size={17} aria-hidden />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={SITE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
             >
               <LinkedinIcon size={17} aria-hidden />
-            </a>
-            <a
-              href={`mailto:${SITE.email}`}
+            </motion.a>
+            <motion.a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${SITE.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Email"
-              className="text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block text-[#9C9990] hover:text-[#CFD2B2] transition-colors duration-200"
             >
               <Mail size={17} />
-            </a>
+            </motion.a>
           </div>
         </div>
 

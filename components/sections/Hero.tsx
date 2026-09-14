@@ -154,7 +154,8 @@ export default function Hero() {
             className="flex flex-col gap-6"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.1 }}
           >
             {/* Status badge */}
             <motion.div variants={itemVariants}>
@@ -239,7 +240,8 @@ export default function Hero() {
           {/* Right — Terminal */}
           <motion.div
             initial={{ opacity: 0, x: 32 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ 
               duration: 0.8, 
               delay: 0.4, 
