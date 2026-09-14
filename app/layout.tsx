@@ -79,9 +79,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}
     >
       <body 
-        className="min-h-screen bg-[#4B3B47] text-[#E0D8DE] antialiased overflow-x-hidden"
+        className="min-h-screen bg-[#4B3B47] text-[#E0D8DE] antialiased overflow-x-hidden relative"
         suppressHydrationWarning
       >
+        {/* Glassmorphism Background Orbs */}
+        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-[#CFD2B2] rounded-full blur-[100px] sm:blur-[140px] opacity-20 animate-blob" />
+          <div className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[500px] max-h-[500px] bg-[#9C9990] rounded-full blur-[100px] sm:blur-[140px] opacity-20 animate-blob animation-delay-2000" />
+          <div className="absolute bottom-[-20%] left-[20%] w-[70vw] h-[70vw] max-w-[700px] max-h-[700px] bg-[#6A6262] rounded-full blur-[100px] sm:blur-[140px] opacity-30 animate-blob animation-delay-4000" />
+        </div>
+        
         {children}
       </body>
     </html>

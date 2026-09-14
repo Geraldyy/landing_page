@@ -88,7 +88,7 @@ export default function Navbar() {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'bg-[#4B3B47]/95 backdrop-blur-md border-b border-[#9C9990]/20 shadow-lg'
+            ? 'bg-[rgba(106,98,98,0.15)] backdrop-blur-2xl border-b border-[rgba(207,210,178,0.1)] shadow-[0_4px_30px_rgba(0,0,0,0.1)]'
             : 'bg-transparent'
         )}
       >
@@ -207,7 +207,7 @@ export default function Navbar() {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-[#4B3B47]/95 backdrop-blur-md"
+          className="absolute inset-0 bg-[rgba(106,98,98,0.2)] backdrop-blur-3xl"
           onClick={() => setMobileOpen(false)}
           aria-hidden="true"
         />

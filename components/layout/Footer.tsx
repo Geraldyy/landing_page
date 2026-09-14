@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="border-t border-[#9C9990]/20 bg-[#4B3B47] py-12"
+      className="relative z-10 border-t border-[rgba(207,210,178,0.1)] bg-[rgba(106,98,98,0.1)] backdrop-blur-2xl py-12 shadow-[0_-4px_30px_rgba(0,0,0,0.05)]"
       role="contentinfo"
     >
       <Container>

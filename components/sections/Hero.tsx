@@ -137,15 +137,6 @@ export default function Hero() {
       className="relative min-h-screen flex items-center pt-20 pb-16"
       aria-labelledby="hero-heading"
     >
-      {/* Subtle texture overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            'radial-gradient(ellipse at 20% 50%, rgba(207,210,178,0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(224,216,222,0.03) 0%, transparent 50%)',
-        }}
-        aria-hidden="true"
-      />
 
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
